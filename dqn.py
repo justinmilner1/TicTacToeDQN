@@ -90,6 +90,8 @@ class DeepQNetworkModel:
         else:
             logging.debug('Starting learning procedure...')
             batch = self.memory.sample(current_batch_size)
+            print("self.target_q_network.states: ", self.target_q_network.states)
+            print("self.__fetch_from_batch(batch, 'next_state'): ", self.__fetch_from_batch(batch, 'next_state'))
             qt = self.session.run(self.target_q_network.output,
                                   feed_dict={self.target_q_network.states: self.__fetch_from_batch(batch, 'next_state')})
             terminals = self.__fetch_from_batch(batch, 'is_terminal')

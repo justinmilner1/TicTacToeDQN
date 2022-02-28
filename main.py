@@ -366,14 +366,14 @@ def face_off(p1_name, p1_path, p2_name='Drunk', p2_path=None, games_to_play=100)
 #print("Training!")
 # #train(p1_name, p2_name, p1_max_ent, p2_max_ent, p2_type, num_of_games=1e6, savedir='./models/test_training', restore_path=None)
 
-#train('player_A','player_B', True, True, 'Novice', 100000,
-#      './models/test_training')
+train('player_A','player_B', True, True, 'Novice', 1000,
+      './models/test_training')
 # train('player_A','player_B', True, True, 'Novice', 300000,
 #       './models/test_training')
 #train('player_A','player_B', True, True, 'Minimax', 12000, './models/test_training','./models/test_training/player_A12-24-20:42.ckpt')
 
-print("face off!")
-face_off('player_A', './models/test_training/player_A12-29-12:10.ckpt', 'player_B', './models/test_training/player_A12-29-12:15.ckpt', 1000)
+#print("face off!")
+#face_off('player_A', './models/test_training/player_A12-29-12:10.ckpt', 'player_B', './models/test_training/player_A12-29-12:15.ckpt', 1000)
 # face_off('player_A', './models/test_training/player_A12-23-15:59.ckpt', 'Drunk', None, 4000)
 # print("---------------------------------------------------")
 # face_off('player_A', './models/test_training/player_A12-23-17:44.ckpt', 'Drunk', None, 4000)
@@ -386,10 +386,10 @@ face_off('player_A', './models/test_training/player_A12-29-12:10.ckpt', 'player_
 #print("---------------------------------------------------")
 #face_off('player_A', './models/test_training/player_A12-28-12:13.ckpt', 'Minimax', None, 50) #drunk pretrained.trained on minimax for 3hrs
 
-# face_off('Minimax', None, 'Minimax', None, 10)
+#face_off('Drunk', 'PlayerA', 'Novice', 'Playerb', 100)
 
 #print("Playing game!")
-# play('./models/test_training/player_A12-23-17:44.ckpt', True)
+#play('./models/test_training/player_A12-23-17:44.ckpt', True)
 # play('Minimax', True)
 
 #face_off('player_A', './models/test_training/player_A12-24-20:42.ckpt', 'Minimax', None, 20)
