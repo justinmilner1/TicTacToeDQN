@@ -10,8 +10,5 @@
 - tensorflow 2.0.0+
 
 ##### Usage:
-```
-$ python main.py
-```
-
-
+#### Usage:
+Adjust main.py to run either train(), play(), or face_off(), then run main.py
